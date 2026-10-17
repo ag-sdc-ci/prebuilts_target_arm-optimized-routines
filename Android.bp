@@ -1,0 +1,55 @@
+// Auto-generated prebuilt APEX Blueprint for external/arm-optimized-routines
+// Staged from Extractive APEX package: ext-arm-optimized-routines (org.blisslabs.ag.ext.arm-optimized-routines)
+
+package {
+    default_applicable_licenses: ["external_arm-optimized-routines_license"],
+}
+
+license {
+    name: "external_arm-optimized-routines_license",
+    visibility: [":__subpackages__"],
+    license_kinds: [
+        "SPDX-license-identifier-MIT",
+    ],
+    license_text: [
+        "LICENSE",
+    ],
+}
+
+cc_prebuilt_library_static {
+    name: "libarm-optimized-routines-math",
+    srcs: ["lib/libarm-optimized-routines-math.a"],
+    export_include_dirs: ["include", "math/include"],
+    ramdisk_available: true,
+    vendor_ramdisk_available: true,
+    recovery_available: true,
+    native_bridge_supported: true,
+    apex_available: [
+        "//apex_available:platform",
+        "com.android.runtime",
+    ],
+    host_supported: true,
+}
+
+cc_prebuilt_library_static {
+    name: "libarm-optimized-routines-string",
+    srcs: ["lib/libarm-optimized-routines-string.a"],
+    export_include_dirs: ["include", "string/include"],
+    ramdisk_available: true,
+    vendor_ramdisk_available: true,
+    recovery_available: true,
+    native_bridge_supported: true,
+    apex_available: [
+        "//apex_available:platform",
+        "com.android.runtime",
+    ],
+    host_supported: true,
+}
+
+cc_prebuilt_library_static {
+    name: "libarm-optimized-routines-mem",
+    srcs: ["lib/libarm-optimized-routines-mem.a"],
+    export_include_dirs: ["include"],
+    visibility: ["//bionic/libc"],
+    host_supported: true,
+}

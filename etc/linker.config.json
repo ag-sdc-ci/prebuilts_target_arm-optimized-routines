@@ -1,0 +1,13 @@
+{
+	"provideLibs": [	
+		    "libdummy_binary_libarm-optimized-routines-math.a-x86_64-v2.so",
+		    "libdummy_binary_libarm-optimized-routines-math.a.so",
+		    "libdummy_ext_arm_optimized_routines-x86_64-v2.so",
+		    "libdummy_ext_arm_optimized_routines.so",
+		    "libdummy_headers_ext_arm_optimized_routines-x86_64-v2.so",
+		    "libdummy_headers_ext_arm_optimized_routines.so",
+		    "libdummy_shared_arm-optimized-routines-x86_64-v2.so",
+		    "libdummy_shared_arm-optimized-routines.so"
+	],
+	"visible": true
+}
