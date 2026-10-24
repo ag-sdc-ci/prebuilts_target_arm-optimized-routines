@@ -18,7 +18,16 @@ license {
 
 cc_prebuilt_library_static {
     name: "libarm-optimized-routines-math",
-    srcs: ["lib/libarm-optimized-routines-math.a"],
+    vendor_available: true,
+    product_available: true,
+    multilib: {
+        lib32: {
+            srcs: ["lib/libarm-optimized-routines-math.a"],
+        },
+        lib64: {
+            srcs: ["lib64/libarm-optimized-routines-math.a"],
+        },
+    },
     export_include_dirs: ["include", "math/include"],
     ramdisk_available: true,
     vendor_ramdisk_available: true,
@@ -29,11 +38,22 @@ cc_prebuilt_library_static {
         "com.android.runtime",
     ],
     host_supported: true,
+    stl: "none",
+    system_shared_libs: [],
 }
 
 cc_prebuilt_library_static {
     name: "libarm-optimized-routines-string",
-    srcs: ["lib/libarm-optimized-routines-string.a"],
+    vendor_available: true,
+    product_available: true,
+    multilib: {
+        lib32: {
+            srcs: ["lib/libarm-optimized-routines-string.a"],
+        },
+        lib64: {
+            srcs: ["lib64/libarm-optimized-routines-string.a"],
+        },
+    },
     export_include_dirs: ["include", "string/include"],
     ramdisk_available: true,
     vendor_ramdisk_available: true,
@@ -44,12 +64,26 @@ cc_prebuilt_library_static {
         "com.android.runtime",
     ],
     host_supported: true,
+    stl: "none",
+    system_shared_libs: [],
 }
 
 cc_prebuilt_library_static {
     name: "libarm-optimized-routines-mem",
-    srcs: ["lib/libarm-optimized-routines-mem.a"],
+    vendor_available: true,
+    product_available: true,
+    multilib: {
+        lib32: {
+            srcs: ["lib/libarm-optimized-routines-mem.a"],
+        },
+        lib64: {
+            srcs: ["lib64/libarm-optimized-routines-mem.a"],
+        },
+    },
     export_include_dirs: ["include"],
     visibility: ["//bionic/libc"],
     host_supported: true,
+    stl: "none",
+    system_shared_libs: [],
 }
+
